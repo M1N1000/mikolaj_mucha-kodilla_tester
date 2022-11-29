@@ -7,7 +7,7 @@ public class  Loops {
         numbers[1] = 71;
         numbers[2] = 14;
         numbers[3] = 38;
-        System.out.println("Tyle wartosci ma zbior- " + numbers.length);
+        System.out.println("Tyle wartosci ma zbior - " + numbers.length);
         int result = 0;
         for (int i = 0; i < numbers.length; i++) {
             result = result + numbers[i];
