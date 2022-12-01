@@ -3,7 +3,9 @@ package kodilla;
 import java.util.Random;
 
 public class RandomNumbers {
+
     public static void main(String[] args) {
+
 
         int end = 5000;
         Random numbers = new Random();
@@ -18,10 +20,12 @@ public class RandomNumbers {
                 suma = suma + los;
                 System.out.println(suma);
 
-                }
+
             }
         }
     }
+}
+
 
 
 
