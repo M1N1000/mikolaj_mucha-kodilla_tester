@@ -1,17 +1,21 @@
 package kodilla;
 
 public class Book {
-    private String author = "Isaac Asimov";
-    private String title = "The Galaxy";
+    private String author;
+    private String title;
 
-    public static String of(){
-        String book = Book.of();
-        System.out.println(book);
-        return book;
+
+
+    public static void of(String author, String title){
+        this.author = author;
+        this.title = title;
+    }
+    public static void main(String[] args){
+        Book book = new Book.of("dsa", "pol");
     }
 
 
 
+    }
 
 
-}
