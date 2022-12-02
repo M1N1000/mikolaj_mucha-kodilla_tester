@@ -1,6 +1,6 @@
 package kodilla;
 
-public abstract class Book {
+
     public class Book {
         private String author;
         private String title;
@@ -13,7 +13,7 @@ public abstract class Book {
 
         }
     }
-}
+
 
 
 
