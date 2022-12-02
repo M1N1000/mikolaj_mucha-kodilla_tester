@@ -1,25 +1,17 @@
 package kodilla;
 
-public class Book {
-    private String author;
-    private String title;
+public abstract class Book {
+    public class Book {
+        private String author;
+        private String title;
 
-    public Book(String of) {
-
-
-    }
-
-
-    public static String of(String author, String title) {
-        return author;
-
-    }
-
-    public static Book main(String[] args) {
-        Book book = new Book(of("dsa", "pol"));
+        public static String of(String author, String title) {
+            String book = Book.of("isaac", "dsadsa");
+            System.out.println(book);
+            return book;
 
 
-        return book;
+        }
     }
 }
 
