@@ -4,18 +4,29 @@ public class Book {
     private String author;
     private String title;
 
-
-
-    public static void of(String author, String title){
-        this.author = author;
-        this.title = title;
-    }
-    public static void main(String[] args){
-        Book book = new Book.of("dsa", "pol");
-    }
-
+    public Book(String of) {
 
 
     }
+
+
+    public static String of(String author, String title) {
+        return author;
+
+    }
+
+    public static Book main(String[] args) {
+        Book book = new Book(of("dsa", "pol"));
+
+
+        return book;
+    }
+}
+
+
+
+
+
+
 
 
