@@ -2,15 +2,19 @@ package kodilla;
 
 
     public class Book {
-        private String author;
-        private String title;
+        private String author = "Isaac Asimov";
+        private String title = "Isaac Asimov";
+        public Book(String author,String title){
+            this.author = author;
+            this.title = title;
 
-        public static Book of(String author, String title) {
-            Book book = Book.of("isaac", "dsadsa");
+            Book book = new Book("Isaac Asimov", "Isaac Asimov");
+        }
+        public static Book of(String author, String title){
+            return new Book(author, title);
+            Book book = Book.of("Isaac Asimov", "Isaac Asimov");
             System.out.println(book);
 
-
-            return book;
         }
     }
 
