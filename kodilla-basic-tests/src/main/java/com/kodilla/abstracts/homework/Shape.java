@@ -10,9 +10,6 @@ public abstract class Shape {
             return  name;
         }
 
-
-
-
     public abstract void giveArea();
 
     public abstract void giveCircumference();

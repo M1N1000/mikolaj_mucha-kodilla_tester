@@ -6,9 +6,11 @@ public class Application {
         square.giveArea();
         square.giveCircumference();
 
+
         Triangle triangle = new Triangle(4,2);
         triangle.giveArea();
         triangle.giveCircumference();
+
 
         Rectangle rectangle = new Rectangle(3,6);
         rectangle.giveArea();
