@@ -3,7 +3,7 @@ package com.kodilla.abstracts.homework;
 public class Baker extends Job{
     String responsibility;
 
-    public Baker(Person perosn) {
+    public Baker() {
         super(4000, "make bread");
     }
     public String responsibility(){
