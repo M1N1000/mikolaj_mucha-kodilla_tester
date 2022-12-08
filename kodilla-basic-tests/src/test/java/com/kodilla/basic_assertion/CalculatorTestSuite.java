@@ -16,7 +16,7 @@ public class CalculatorTestSuite {
         double b = 5.8;
         double sumResult = calculator.add(a,b);
         double deltaAdd = calculator.add(a,b);
-        assertEquals(11.40, sumResult, deltaAdd);
+        assertEquals(11.40, sumResult, 0.01);
 
     }
 
@@ -27,7 +27,7 @@ public class CalculatorTestSuite {
         double b = 5.8;
         double minusResult = calculator1.minus(a, b);
         double minusDelta = calculator1.minus(a,b);
-        assertEquals(-0.2, minusResult, minusDelta);
+        assertEquals(-0.2, minusResult, 0.01);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class CalculatorTestSuite {
         double b = 8;
         double potegaResult = calculator2.potega(a);
         double potegaDelta = calculator2.potega(a);
-        assertEquals(4, potegaResult,potegaDelta );
+        assertEquals(4, potegaResult,0.01 );
     }
 }
 
