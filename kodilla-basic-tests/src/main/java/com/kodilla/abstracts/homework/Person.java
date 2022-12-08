@@ -15,10 +15,13 @@ public class Person {
 
 
     public static void main(String[] args) {
-        Job baker = new Baker();
+        Baker baker = new Baker();
+        Person person = new Person("Jake",35,baker);
         baker.giveResponsibility();
 
+
         Job builder = new Builder();
+        Person person1 = new Person("Duke",45,builder);
         builder.giveResponsibility();
 
 
