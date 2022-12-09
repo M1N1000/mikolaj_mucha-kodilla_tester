@@ -9,13 +9,13 @@ public class Book {
         this.title = title;
         this.author = author;
     }
-    private static String of(String author,String title){
+    public static Book of(String author,String title){
         Book book = new Book(author, title);
         return book;
     }
 
     public static void main(String[] args) {
-        Book book = new Book("Matas","dsada");
+        Book book = Book.of("Matas","KKKKK);
 
     }
 }
