@@ -10,9 +10,6 @@ public class CashMachine {
     }
 
     public void addTransaction(int amount) {
-        if (amount < 0) {
-            System.out.println("Amount of money is less than 0");
-        }
 
         if ((getBalance() + amount) >= 0) {
             this.size++;
