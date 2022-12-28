@@ -6,7 +6,7 @@ public class Bmw implements Car {
     private int increase;
 
 
-    public Bmw(int speed) {
+    public Bmw(int speed, int increase) {
         this.speed = speed;
         this.decrease = decrease;
         this.increase = increase;
@@ -20,7 +20,7 @@ public class Bmw implements Car {
 
     @Override
     public int increaseSpeed() {
-        return speed +=40;
+        return speed +=increase;
         }
 
 

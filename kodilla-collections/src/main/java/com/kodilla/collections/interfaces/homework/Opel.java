@@ -8,7 +8,7 @@ public class Opel implements Car
     private int increase;
 
 
-    public Opel(int speed) {
+    public Opel(int speed, int increase) {
         this.speed = speed;
         this.decrease = decrease;
         this.increase = increase;
@@ -22,7 +22,7 @@ public class Opel implements Car
 
     @Override
     public int increaseSpeed() {
-        return speed +=20;
+        return speed +=increase;
     }
 
 
