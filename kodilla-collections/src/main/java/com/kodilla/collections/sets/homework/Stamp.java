@@ -6,11 +6,11 @@ public class Stamp {
     private String name;
     private double width ;
     private double length;
-    private String stamp;
+    private boolean stamp;
 
 
 
-    public Stamp(String name, double width, double length, String stamp ) {
+    public Stamp(String name, double width, double length, boolean stamp ) {
         this.name = name;
         this.stamp = stamp;
         this.width = width;
@@ -28,7 +28,7 @@ public class Stamp {
         return length;
     }
 
-    public String getStamp() {
+    public boolean getStamp() {
         return stamp;
     }
 
