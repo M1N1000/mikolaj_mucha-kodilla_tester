@@ -7,7 +7,7 @@ import com.kodilla.collections.interfaces.homework.Ford;
 import com.kodilla.collections.interfaces.homework.Opel;
 
 public class CarUtils {
-    public static void displayCarInfo(Car car) {
+    public static void describeCarInfo(Car car) {
         System.out.println("----------------");
         System.out.println("Car kind: " + getCarName(car));
         System.out.println("Car Speed: " + car.getSpeed());

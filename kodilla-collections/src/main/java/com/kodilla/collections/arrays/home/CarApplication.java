@@ -18,7 +18,7 @@ public class CarApplication {
         for (int c = 0; c < cars.length; c++)
             cars[c] = drawnCar();
         for (Car car : cars)
-            CarUtils.displayCarInfo(car);
+            CarUtils.describeCarInfo(car);
     }
 
     private static Car drawnCar() {
