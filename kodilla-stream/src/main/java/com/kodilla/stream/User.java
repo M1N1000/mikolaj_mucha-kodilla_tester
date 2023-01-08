@@ -3,6 +3,7 @@ package com.kodilla.stream;
 import java.util.Objects;
 
 public class User {
+
     private String username;
     private int age;
     private int numberOfPost;

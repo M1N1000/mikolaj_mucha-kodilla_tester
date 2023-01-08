@@ -18,7 +18,7 @@ public class Student {
 
     public Teacher getTeacher() {
 
-       return Optional.ofNullable(teacher).orElse(new Teacher("undefined"));
+       return Optional.ofNullable(teacher).orElse(new Teacher("<undefined>"));
     }
 
     @Override
