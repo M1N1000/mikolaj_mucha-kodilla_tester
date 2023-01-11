@@ -18,6 +18,7 @@ public class Warehouse {
                 .stream()
                 .filter(f -> f.getNumber().equals(number))
                 .findFirst().orElseThrow(() -> new OrderDoesntExistException());
+
         return search;
 
 

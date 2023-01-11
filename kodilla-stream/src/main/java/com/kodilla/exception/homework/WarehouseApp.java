@@ -8,11 +8,8 @@ public class WarehouseApp{
         warehouse.addOrder(new Order("1"));
         warehouse.addOrder(new Order("2"));
         warehouse.addOrder(new Order("3"));
-        warehouse.addOrder(new Order("4"));
-        warehouse.addOrder(new Order("5"));
-        warehouse.addOrder(new Order("6"));
-        warehouse.addOrder(new Order("7"));
-        warehouse.getOrder("11");
+        
+        warehouse.getOrder("37");
 
 
 
