@@ -1,9 +1,9 @@
 package com.kodilla.exception.homework;
 
+import java.util.Scanner;
+
 public class Order {
     private String number;
-    private String number2;
-
 
 
     public Order(String number) {
@@ -11,6 +11,9 @@ public class Order {
     }
 
     public String getNumber() {
-        return number;
+            return number;
+        }
     }
-}
+
+
+

@@ -2,16 +2,25 @@ package com.kodilla.exception.homework;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Warehouse {
-    private List<Order> addOrder(){
-        List<Order> orders = new ArrayList<>();
-        orders.add(new Order("1"));
-        orders.add(new Order("2"));
-        orders.add(new Order("3"));
-        orders.add(new Order("4"));
-        return orders;
+    private List<Order> orders;
+
+    public Warehouse(){
+        this.orders = new ArrayList<>();
     }
-   // public Order getOrder(String number)
+    public void  addOrder(Order order){
+        orders.add(order);
+
+    }
+    public Order getOrder(String number)throws OrderDoesntExistException{
+        Order search = orders
+                .stream()
+                .filter(f -> f.getNumber().equals(number))
+                .findFirst().orElseThrow(() -> new OrderDoesntExistException());
+        return search;
+
+
+    }
+
 }
