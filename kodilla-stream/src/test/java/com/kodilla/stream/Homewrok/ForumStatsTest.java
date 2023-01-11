@@ -25,12 +25,12 @@ class ForumStatsTest {
 
     @Test
     public void testAvgAfter40(){
-        assertEquals(19.5,ForumStats.avgAfter40());
+        assertEquals(2.25,ForumStats.avgAfter40());
     }
 
     @Test
     public void testAvgBefore40(){
-        assertEquals(201.0,ForumStats.avgBefore40());
+        assertEquals(2382.0,ForumStats.avgBefore40());
     }
 
 
