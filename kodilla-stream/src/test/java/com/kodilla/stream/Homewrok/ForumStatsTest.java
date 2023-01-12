@@ -10,16 +10,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ForumStatsTest {
-    public static List<User> getUserList(){
-        List<User> testUsers = new ArrayList<>();
-        testUsers.add(new User("Mike",25,300,"Chemists"));
-        testUsers.add(new User("Ben",31,102,"Driver"));
-        testUsers.add(new User("Frank",45,24,"Driver"));
-        testUsers.add(new User("Scott",52,15,"Chemists"));
-
-
-        return getUserList();
-    }
 
 
 

@@ -16,18 +16,6 @@ public class UsersDialogs {
             }
         }
     }
-        public static String getNumberOfOrder() {
-            Scanner scanner1 = new Scanner(System.in);
-            while(true){
-                System.out.println("Enter number of Order: ");
-                String p = scanner1.nextLine();
-                try {
-                    String order = String.valueOf(Integer.parseInt(p));
-                    return order;
-                }catch (Exception e){
-                    System.out.println("Wrong data. Enter only digits. try again. ");
-                }
+
             }
-        }
-    }
 
