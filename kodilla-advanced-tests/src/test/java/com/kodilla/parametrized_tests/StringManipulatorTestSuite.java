@@ -21,7 +21,7 @@ class StringManipulatorTestSuite {
         assertEquals(expected, manipulator.getStringLengthWithoutSpaces(input));
     }
     @ParameterizedTest
-    @CsvFileSource (resources = "./intNumberOfCommas.csv", delimiter = ':')
+    @CsvFileSource (resources = "/intNumberOfCommas.csv", delimiter = ':')
     public void shouldCountNumberOfCommas(String input, int expected) {
         assertEquals(expected, manipulator.countNumberOfCommas(input));
     }
