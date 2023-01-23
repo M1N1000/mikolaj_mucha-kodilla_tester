@@ -13,11 +13,13 @@ class GamblingMachineTestSuite {
 
 
     @ParameterizedTest
-    @CsvFileSource (resources = "/intFalseGamblingMachine.csv", delimiterString = ", ")
+    @CsvFileSource (resources = "/intFalseGamblingMachine.csv")
     public void shouldInputExpected(String number ) throws InvalidNumbersException {
-
-
-        Set<Integer> integerSet = new HashSet<>(Integer.parseInt(number)) ;
+        //String numbers[] = number.split(" ");
+        //Set<Integer> integerSet = new HashSet<>() ;
+        //for (String s : numbers){
+          //  integerSet.add(Integer.parseInt(s));
+        }
         assertTrue(gamblingMachine.howManyWins(integerSet)>0);
 
     }
