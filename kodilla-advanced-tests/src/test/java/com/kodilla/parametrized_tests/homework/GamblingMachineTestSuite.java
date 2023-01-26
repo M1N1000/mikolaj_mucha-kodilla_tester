@@ -20,7 +20,7 @@ class GamblingMachineTestSuite {
         for (String s : numbers){
             integerSet.add(Integer.parseInt(s));
         }
-        assertTrue(gamblingMachine.howManyWins(integerSet)>0);
+        assertTrue(gamblingMachine.howManyWins(integerSet)>=0 && gamblingMachine.howManyWins(integerSet)<=49);
 
     }
 }

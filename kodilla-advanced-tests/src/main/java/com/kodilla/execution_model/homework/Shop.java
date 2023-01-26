@@ -22,10 +22,10 @@ public class Shop {
                 .filter(order -> order.getDate().isAfter(start)&&order.getDate().isBefore(end))
                 .collect(Collectors.toList());
     }
-    //public List<Order> getOrderByValue(double max, double min){
-        //return this.orders
-                //.stream()
-               // .map(Order::getValue).min())
+  // public List<Order> getOrderByValue(double max, double min){
+     //   return this.orders
+               // .stream()
+              //  .map(Order::getValue).min())
                // .collect(Collectors.toList());
 
     }
