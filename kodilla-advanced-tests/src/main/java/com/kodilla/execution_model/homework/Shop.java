@@ -9,26 +9,41 @@ public class Shop {
     public static List<Order> orders = new ArrayList<>();
 
 
-    public void addOrder(Order order){
+    public void addOrder(Order order) {
         this.orders.add(order);
     }
-    public int getSize(){
+
+    public int getSize() {
         return this.orders.size();
 
     }
-    public List<Order> getOrderByDataRange(LocalDate start, LocalDate end){
-        return this.orders
+
+    public static List<Order> getOrderByDataRange(LocalDate start, LocalDate end) {
+        return orders
                 .stream()
-                .filter(order -> order.getDate().isAfter(start)&&order.getDate().isBefore(end))
+                .filter(order -> order.getDate().isAfter(start) && order.getDate().isBefore(end))
                 .collect(Collectors.toList());
     }
-  // public List<Order> getOrderByValue(double max, double min){
-     //   return this.orders
-               // .stream()
-              //  .map(Order::getValue).min())
-               // .collect(Collectors.toList());
 
+    public static List<Order> getOrderMaxAndMin(double min, double max) {
+        return orders
+                .stream()
+                .filter(order -> order.getValue()>min)
+                .filter(order -> order.getValue()<max)
+                .collect(Collectors.toList());
     }
+
+
+    public static double getOrdersValue() {
+        double sum = 0;
+        for (int i = 0; i < orders.size(); i++)
+            sum += orders.get(i).getValue();
+        return sum;
+    }
+}
+
+
+
 
 
 

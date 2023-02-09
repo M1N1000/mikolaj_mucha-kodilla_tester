@@ -3,5 +3,5 @@ package com.kodilla.notifications.homework;
 import com.kodilla.notifications.Notification;
 
 public interface Client {
-    void receive(Notification notification);
+    void receive(Notification notificationgo);
 }
