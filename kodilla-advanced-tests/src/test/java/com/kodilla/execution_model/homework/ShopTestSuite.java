@@ -12,11 +12,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ShopTestSuite {
 
 
+
     Shop shop = new Shop();
     Order one = new Order(250.90, LocalDate.now(), "Mikolaj");
     Order two = new Order(150.12, LocalDate.now(), "Filip");
     Order three = new Order(415.45, LocalDate.now(), "Natalka");
     List<Order> orders = Arrays.asList(one, two, three);
+    @BeforeEach
+    public void initializeInvoice() {
+        shop.addOrder(one);
+        shop.addOrder(two);
+        shop.addOrder(three);
+
+
+    }
 
 
     @Test
@@ -46,12 +55,5 @@ class ShopTestSuite {
         assertEquals(816.47,Shop.getOrdersValue());
     }
 
-    @BeforeEach
-    public void initializeInvoice() {
-        shop.addOrder(one);
-        shop.addOrder(two);
-        shop.addOrder(three);
 
-
-    }
 }
