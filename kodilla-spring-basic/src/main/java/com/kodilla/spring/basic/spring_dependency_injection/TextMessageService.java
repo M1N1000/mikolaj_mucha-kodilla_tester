@@ -1,12 +1,11 @@
 package com.kodilla.spring.basic.spring_dependency_injection;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 @Service
-@Primary
-public class SkypeMessageService implements MessageService{
-    public String send(String  message,String receiver){
+public class TextMessageService implements MessageService{
+    @Override
+    public String send(String message, String receiver) {
         return "Sending [" + message + "] to: " + receiver  + " using Skype";
     }
 }
