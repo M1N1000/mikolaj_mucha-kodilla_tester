@@ -72,10 +72,10 @@ class WeatherNotificationServiceTestSuite {
     }
 
     @Test
-    public void shouldSendNotificationToAllWithRelevantMethod() {
+    public void shouldSendNotificationToAll() {
         Subscriber secondSubscriber = Mockito.mock(Subscriber.class);
-        Location krakow = Mockito.mock(Location.class);
         Subscriber thirdSubscriber = Mockito.mock(Subscriber.class);
+        Location krakow = Mockito.mock(Location.class);
         Location gdansk = Mockito.mock(Location.class);
         weatherNotificationService.addSubscriber(secondSubscriber, krakow);
         weatherNotificationService.addSubscriber(subscriber, warsaw);
