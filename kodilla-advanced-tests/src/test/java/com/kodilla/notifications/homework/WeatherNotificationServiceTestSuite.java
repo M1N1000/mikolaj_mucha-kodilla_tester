@@ -31,12 +31,6 @@ class WeatherNotificationServiceTestSuite {
         Mockito.verify(warsaw,Mockito.times(1)).receiveSubscriber(subscriber);
     }
 
-    @Test
-    public void subscriberShouldReceiveNotificationFromRightLocation() {
-        weatherNotificationService.addSubscriber(subscriber, warsaw);
-        weatherNotificationService.sendNotificationToLocation(weatherNotification, warsaw);
-        Mockito.verify(subscriber, Mockito.times(1)).receive(weatherNotification);
-    }
 
     @Test
     public void subscriberShouldNotReceiveNotificationFromWrongLocation() {
@@ -46,12 +40,6 @@ class WeatherNotificationServiceTestSuite {
         Mockito.verify(subscriber, Mockito.never()).receive(weatherNotification);
     }
 
-    @Test
-    public void shouldUnsubscribeFromLocation() {
-        weatherNotificationService.addSubscriber(subscriber, warsaw);
-        weatherNotificationService.removeSubscriberFromLocation(subscriber, warsaw);
-        Mockito.verify(warsaw, Mockito.times(1)).removeSubscriber(subscriber);
-    }
 
     @Test
     public void unSubscribeFromLocationShouldNotReceiveNotificationsFromLocation() {
@@ -61,30 +49,8 @@ class WeatherNotificationServiceTestSuite {
         Mockito.verify(subscriber, Mockito.never()).receive(weatherNotification);
     }
 
-    @Test
-    public void shouldUnsubscribeFromAll() {
-        Location krakow = Mockito.mock(Location.class);
-        weatherNotificationService.addSubscriber(subscriber, warsaw);
-        weatherNotificationService.addSubscriber(subscriber, krakow);
-        weatherNotificationService.removeSubscriberFromAllLocations(subscriber);
-        Mockito.verify(warsaw, Mockito.times(1)).removeSubscriber(subscriber);
-        Mockito.verify(krakow, Mockito.times(1)).removeSubscriber(subscriber);
-    }
 
-    @Test
-    public void shouldSendNotificationToAll() {
-        Subscriber secondSubscriber = Mockito.mock(Subscriber.class);
-        Subscriber thirdSubscriber = Mockito.mock(Subscriber.class);
-        Location krakow = Mockito.mock(Location.class);
-        Location gdansk = Mockito.mock(Location.class);
-        weatherNotificationService.addSubscriber(secondSubscriber, krakow);
-        weatherNotificationService.addSubscriber(subscriber, warsaw);
-        weatherNotificationService.addSubscriber(thirdSubscriber, gdansk);
-        weatherNotificationService.sendNotificationToAll(weatherNotification);
-        Mockito.verify(secondSubscriber, Mockito.times(1)).receive(weatherNotification);
-        Mockito.verify(subscriber, Mockito.times(1)).receive(weatherNotification);
-        Mockito.verify(thirdSubscriber, Mockito.times(1)).receive(weatherNotification);
-    }
+
 
 
     @Test

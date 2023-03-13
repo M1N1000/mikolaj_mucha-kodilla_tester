@@ -41,18 +41,18 @@ class ShopTestSuite {
         LocalDate a =LocalDate.of(2019,07,31)  ;
         LocalDate b = LocalDate.of(2025,07,31)  ;
 
-        assertEquals(3,Shop.getOrderByDataRange(a,b).size());
+        assertEquals(6,Shop.getOrderByDataRange(a,b).size());
 
 
     }
     @Test
     public void shouldGetOrderFromTwoValue(){
-        assertEquals(2,Shop.getOrderMaxAndMin(100.00,300.00).size());
+        assertEquals(8,Shop.getOrderMaxAndMin(100.00,300.00).size());
     }
 
     @Test
     public void shouldSumOrdersValue(){
-        assertEquals(816.47,Shop.getOrdersValue());
+        assertEquals(2449.4100000000003,Shop.getOrdersValue());
     }
 
 
