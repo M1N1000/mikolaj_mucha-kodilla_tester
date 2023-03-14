@@ -20,7 +20,7 @@ class SelectCarTestSuite {
         String carType = car.getCarType();
         System.out.println(carType);
         List<String>possibleCarType = Arrays.asList("It is Winter, the best choice is SUV","It is summer, the best choice is Cabrio","It is Autumn or Spring, the best choice is sedan");
-        Assertions.assertFalse(possibleCarType.contains(carType));
+        Assertions.assertTrue(possibleCarType.contains(carType));
     }
 
 

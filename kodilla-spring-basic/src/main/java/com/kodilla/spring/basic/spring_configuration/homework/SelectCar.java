@@ -15,13 +15,10 @@ public class SelectCar {
         int carType = generator.nextInt(3);
         if (carType == 0) {
             car = new SUV();
-            System.out.println("It is Winter, the best choice is SUV");
         } else if (carType == 1) {
             car = new Cabrio();
-            System.out.println("It is summer, the best choice is Cabrio");
         } else {
             car = new Sedan();
-            System.out.println("It is Autumn or Spring, the best choice is sedan");
         }
         return car;
     }

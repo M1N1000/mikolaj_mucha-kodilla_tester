@@ -15,6 +15,6 @@ public class Cabrio implements Car{
 
     @Override
     public String getCarType() {
-        return "Cabrio";
+        return "It is summer, the best choice is Cabrio";
     }
 }

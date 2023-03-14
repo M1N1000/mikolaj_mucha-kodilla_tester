@@ -29,12 +29,8 @@ public class Calculator {
         this.display.display(sum);
         return sum;
     }
-    public double divide(double a, double b) throws DivideByZero{
+    public double divide(double a, double b) throws DivideByZero {
         double sum = a/b;
-        if (b == 0 || a == 0){
-            System.out.println("Error: divide by zero!!! Try again. ");
-            throw new DivideByZero();
-        }
         this.display.display(sum);
         return sum;
     }

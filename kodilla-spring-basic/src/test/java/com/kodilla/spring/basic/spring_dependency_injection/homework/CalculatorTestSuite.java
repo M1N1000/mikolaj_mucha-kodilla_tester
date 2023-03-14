@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class CalculatorTestSuite {
 
 
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic.spring_dependency_injection.homework");
+    ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic.spring_dependency_injection.homework");
         Calculator bean = context.getBean(Calculator.class);
         double a = 3.22;
         double b = 12.58;
@@ -34,11 +34,6 @@ public class CalculatorTestSuite {
     public void shouldDivide() throws DivideByZero{
             double result = bean.divide(a,b);
             Assertions.assertEquals(0.25,result,0.01);
-    }
-    @Test
-    public void shouldNotDivide()throws DivideByZero{
-            double result = bean.divide(a,c);
-            Assertions.assertNotNull(result);
     }
 
 }

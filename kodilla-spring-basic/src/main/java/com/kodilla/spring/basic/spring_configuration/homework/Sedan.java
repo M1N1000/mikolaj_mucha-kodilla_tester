@@ -14,6 +14,6 @@ public class Sedan implements Car{
 
     @Override
     public String getCarType() {
-        return "Sedan";
+        return "It is Autumn or Spring, the best choice is sedan";
     }
 }

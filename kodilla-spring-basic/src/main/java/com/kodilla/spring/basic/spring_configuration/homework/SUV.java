@@ -11,6 +11,6 @@ public class SUV implements Car{
 
     @Override
     public String getCarType() {
-        return "SUV";
+        return "It is Winter, the best choice is SUV";
     }
 }
