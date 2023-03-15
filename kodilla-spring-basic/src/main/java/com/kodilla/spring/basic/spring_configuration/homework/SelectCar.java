@@ -23,23 +23,6 @@ public class SelectCar {
         return car;
     }
 
-    @Bean
-    public boolean SettingUpTheLights() {
-        Random generator = new Random();
-        int hours = generator.nextInt(23);
-
-
-        System.out.println("It is: " + hours);
-        if (hours >= 20 || hours <= 5) {
-            hasHeadlightsTurnedOn = true;
-            System.out.println("Lights is on");
-            } else {
-                hasHeadlightsTurnedOn =  false;
-            System.out.println("Lights is off");
-            }
-
-        return hasHeadlightsTurnedOn;
-    }
 
     }
 
