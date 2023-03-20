@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNameSpace="http://www.kodilla.com"
+           xmlns="http://www.kodilla.com"
+           elementFormDefault="qualified">
+    <xs:element name="car">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="manufakturer" type="xs:string"/>
+                <xs:element name="model" type="xs:string"/>
+                <xs:element name="engine" type="xs:integer"/>
+                <xs:element name="type" type="xs:string" default="sedan"/>
+                <xs:element name="color" type="xs:string" default="black"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+<fr:car xmlns:fr="http://www.kodilla.com"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.kodilla.com  vehicles.xsd">
+    <fr:manufakturer>opel</fr:manufakturer>
+    <fr:model>vectra</fr:model>
+    <fr:engine>2.0</fr:engine>
+    <fr:type>coupe</fr:type>
+    <fr:color>red</fr:color>
+</fr:car>

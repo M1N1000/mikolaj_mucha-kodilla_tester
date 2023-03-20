@@ -10,11 +10,9 @@ repositories {
 }
 
 dependencies {
-    implementation('javax.xml.bind:jaxb-api:2.3.0')
-    implementation('javax.activation:activation:1.1')
-    implementation('org.glassfish.jaxb:jaxb-runtime:2.3.0')
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
 }
 
 test {
