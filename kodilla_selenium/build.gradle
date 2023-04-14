@@ -3,6 +3,9 @@ plugins {
 }
 
 group 'com.kodilla'
+
+sourceCompatibility = 1.8
+
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -12,9 +15,12 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
-}
+    implementation( group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59')
+    implementation(group: 'com.github.lewka', name: 'ocular', version: '1.0.5') {
+        exclude group: "net.sf", module: "jargs"
+    }
 
-test {
-    useJUnitPlatform()
+    test{
+        useJUnit()
+    }
 }

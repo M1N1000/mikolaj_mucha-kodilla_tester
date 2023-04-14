@@ -13,4 +13,5 @@ include 'kodilla-rest-api'
 include 'kodilla_selenium'
 include 'kodilla-login-sellenium'
 include 'kodilla-login-selenium'
+include 'kodilla-cucumber'
 
