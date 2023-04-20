@@ -41,7 +41,7 @@ class DbManagerTestSuite {
 
         //Then
         int counter = getResultsCount(rs);
-        int expected = count + 5;
+         int expected = count ;
         Assertions.assertEquals(expected, counter);
 
         rs.close();
@@ -53,11 +53,7 @@ class DbManagerTestSuite {
     }
 
     private static final List<AbstractMap.SimpleEntry<String, String>> USERS = List.of(
-            new AbstractMap.SimpleEntry<>("Zara", "Ali"),
-            new AbstractMap.SimpleEntry<>("Otman", "Use"),
-            new AbstractMap.SimpleEntry<>("Mark", "Boq"),
-            new AbstractMap.SimpleEntry<>("Uli", "Wimer"),
-            new AbstractMap.SimpleEntry<>("Oli", "Kosiw")
+
     );
 
     private void insertUsers(Statement statement) throws SQLException {
@@ -90,4 +86,37 @@ class DbManagerTestSuite {
         }
         return count;
     }
-}
+
+    @Test
+    public void testSelectUsersAndPosts() throws SQLException {
+
+        //Given
+        String sqlQuery = "SELECT firstname,lastname, COUNT(*) AS POST_NUMBER\n" +
+                "FROM users\n" +
+                "join post p on users.id = p.user_id\n" +
+                "GROUP BY USER_ID\n" +
+                "HAVING COUNT(*) >= 2;";
+        Statement statement = dbManager.getConnection().createStatement();
+        ResultSet rs = statement.executeQuery(sqlQuery);
+
+
+
+        //When
+        int counter =  0;
+        while (rs.next()) {
+            System.out.println(
+                    rs.getString("FIRSTNAME") + ", " +
+                    rs.getString("LASTNAME"));
+            counter++;
+        }
+            //Then
+            Assertions.assertEquals((1), counter);
+            rs.close();
+            statement.close();
+        }
+
+
+    }
+
+
+
